@@ -7,5 +7,22 @@ public class Exercise_20 {
     NOTA: Si se introduce un numero menor o igual que 1, directamente es no primo.*/
 
 
+        int number = Integer.parseInt(JOptionPane.showInputDialog("Ingrese un Número: "));
+        String message = "";
+        if(number == 0 || number == 1) {
+            message = "Es número ingresado No es primo";
+        } else {
+            for(int i = 2; i < number; i++) {
+                if(number % i == 0){
+                    message = "El Número ingresado No es Primo!";
+                    break;
+                }
+            }
+        }
+
+        if(message == "") {
+            message = "El número ingresado Si es Primo";
+        }
+        JOptionPane.showMessageDialog(null, message);
     }
 }
